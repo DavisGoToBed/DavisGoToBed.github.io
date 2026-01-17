@@ -8,13 +8,13 @@
 
   <style>
     :root{
-      --bg: #05080f;        /* zwart */
-      --panel: #0b1222;     /* donker blauw-zwart */
-      --line: #1f2a44;      /* border */
-      --text: #f8fafc;      /* wit */
-      --muted: #b8c7da;     /* lichtgrijs/blauw */
-      --accent: #7dd3fc;    /* lichtblauw */
-      --accent2: #38bdf8;   /* iets feller lichtblauw */
+      --bg: #05080f;
+      --panel: #0b1222;
+      --line: #1f2a44;
+      --text: #f8fafc;
+      --muted: #b8c7da;
+      --accent: #7dd3fc;
+      --accent2: #38bdf8;
       --shadow: 0 12px 40px rgba(0,0,0,.45);
       --radius: 18px;
     }
@@ -35,7 +35,6 @@
 
     .wrap{ max-width: 1040px; margin: 0 auto; padding: 22px; }
 
-    /* Topbar */
     .topbar{
       position: sticky; top: 0; z-index: 20;
       background: rgba(5,8,15,.72);
@@ -63,7 +62,6 @@
     .nav a{ color: var(--muted); padding: 8px 10px; border-radius: 10px; }
     .nav a:hover{ background: rgba(125,211,252,.10); color: var(--text); text-decoration:none; }
 
-    /* Hero */
     .hero{
       padding: 44px 0 10px;
     }
@@ -153,7 +151,6 @@
       margin: 0;
     }
 
-    /* Sections */
     .section{ margin-top: 22px; padding: 18px 0 0; }
     .section h2{
       margin: 0 0 12px;
@@ -239,6 +236,16 @@
       flex-wrap:wrap;
     }
     .small{ font-size: 13px; color: rgba(184,199,218,.85); margin: 0; }
+
+    code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.95em;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(31,42,68,.8);
+      padding: 2px 6px;
+      border-radius: 8px;
+      color: var(--text);
+    }
   </style>
 </head>
 
@@ -270,7 +277,7 @@
         <div class="chips">
           <span class="chip">Java 21</span>
           <span class="chip">Spigot / Paper 1.21.x</span>
-          <span class="chip">Events • Utility • Fun</span>
+          <span class="chip">Events • Utility • Fun • RP</span>
           <span class="chip">Config & UX</span>
         </div>
 
@@ -304,7 +311,7 @@
       <div class="card" style="padding:18px;">
         <p style="margin:0; color: var(--muted);">
           Ik ben <strong>DavisGoToBed</strong>, een Java Developer die Minecraft servers helpt met unieke events,
-          handige tools en fun features. Ik maak plugins die makkelijk te configureren zijn, netjes werken op productie-servers
+          handige tools, RP-systemen en fun features. Ik maak plugins die makkelijk te configureren zijn, netjes werken op productie-servers
           en goed aanvoelen voor spelers én staff.
         </p>
       </div>
@@ -314,30 +321,28 @@
       <h2>Mijn plugins</h2>
 
       <div class="grid">
-        <!-- DRG -->
         <div class="card plugin">
           <h3>✨ DRG ✨</h3>
           <p style="margin:0; color: var(--muted);">
-            Red Light / Green Light event-plugin geïnspireerd op Squid Game — voor alle soorten servers (RP tot Survival).
+            Red Light / Green Light event-plugin geïnspireerd op Squid Game — voor alle soorten servers (Roleplay tot Survival).
           </p>
 
           <ul>
-            <li><strong>Squid Game Event:</strong> Host start met <code>/drg start</code> en stopt met <code>/drg stop</code>; alleen spelers in radius doen mee.</li>
+            <li><strong>Event:</strong> Host start met <code>/drg start</code> en stopt met <code>/drg stop</code>; spelers binnen radius doen mee.</li>
             <li><strong>GREEN LIGHT:</strong> rennen richting de finish-lijn.</li>
             <li><strong>RED LIGHT:</strong> stil staan (0.5s grace). Beweeg je? Dan lig je eruit en ga je tijdelijk Spectator (max 20 blocks van host).</li>
-            <li><strong>Finish = Host Line:</strong> finish-lijn links/rechts van de host startpositie; raak lijn = SAFE + WIN.</li>
-            <li><strong>Event Gear & Inventory:</strong> host oranje suit, deelnemers groen; iedereen lege inventory; na afloop/relog krijg je alles terug.</li>
+            <li><strong>Finish = Host Line:</strong> finish-lijn links/rechts van host startpositie; raak lijn = SAFE + WIN.</li>
+            <li><strong>Gear & Inventory:</strong> host oranje suit, deelnemers groen; lege inventory; na afloop/relog restore.</li>
             <li><strong>BossBar UI:</strong> live status + countdown voor GREEN/RED.</li>
           </ul>
 
           <div class="meta">
             <span class="tag">Spigot / Paper 1.21.x</span>
             <span class="tag">Java 21</span>
-            <span class="tag">Event Plugin</span>
+            <span class="tag">Event</span>
           </div>
         </div>
 
-        <!-- DBackup -->
         <div class="card plugin">
           <h3>✨ DBackup ✨</h3>
           <p style="margin:0; color: var(--muted);">
@@ -345,9 +350,9 @@
           </p>
 
           <ul>
-            <li><strong>Automatische backups</strong> om de X minuten</li>
+            <li><strong>Auto backups</strong> om de X minuten</li>
             <li><strong>Handmatige backup</strong> via <code>/backup</code></li>
-            <li><strong>Wereld saven + kopiëren</strong> (veilig en consistent)</li>
+            <li><strong>Wereld saven + kopiëren</strong></li>
             <li><strong>Configurable</strong> via <code>config.yml</code></li>
           </ul>
 
@@ -358,22 +363,106 @@
           </div>
         </div>
 
-        <!-- DFunDeaths -->
         <div class="card plugin">
           <h3>✨ DFunDeaths ✨</h3>
           <p style="margin:0; color: var(--muted);">
-            Grappige death-message plugin met extra effects voor maximale chaos (op een leuke manier).
+            Grappige death-message plugin met extra effects voor maximale chaos.
           </p>
 
           <ul>
-            <li><strong>Custom Death Messages:</strong> woordgrappen gebaseerd op hoe iemand sterft</li>
-            <li><strong>Death Effect:</strong> lightning + particles + sound bij death (zichtbaar voor iedereen)</li>
+            <li><strong>Custom Death Messages</strong> met woordgrappen</li>
+            <li><strong>Death Effect:</strong> lightning + particles + sound (zichtbaar voor iedereen)</li>
           </ul>
 
           <div class="meta">
             <span class="tag">Spigot / Paper 1.21.x</span>
             <span class="tag">Java 21</span>
             <span class="tag">Fun</span>
+          </div>
+        </div>
+
+        <div class="card plugin">
+          <h3>✨ DShop ✨</h3>
+          <p style="margin:0; color: var(--muted);">
+            Professioneel, veilig & uitbreidbaar shop- en sell-systeem voor Minecraft survival servers.
+          </p>
+
+          <ul>
+            <li><strong>Shop GUI:</strong> <code>/shop</code> met categorieën, pagina’s, thema’s en volledige config via <code>config.yml</code>.</li>
+            <li><strong>Bevestiging & hoeveelheid:</strong> confirm menu, stacks/amounts, quick buttons, live prijsberekening.</li>
+            <li><strong>Sell systeem:</strong> <code>/sell</code> GUI, <code>/sell hand</code>, <code>/sell all</code>; tiers (IRON/DIAMOND/NETHERITE), blacklist, overrides, confirm.</li>
+            <li><strong>Economy-safe:</strong> Vault support, inventory check, transaction-safe, geen exploits/duplication.</li>
+            <li><strong>Exploit-proof GUI:</strong> shift-click/number keys/drag geblokkeerd waar nodig.</li>
+          </ul>
+
+          <div class="meta">
+            <span class="tag">Spigot / Paper 1.21.x</span>
+            <span class="tag">Java 21</span>
+            <span class="tag">Survival Economy</span>
+          </div>
+        </div>
+
+        <div class="card plugin">
+          <h3>✨ DPolitieMenu ✨</h3>
+          <p style="margin:0; color: var(--muted);">
+            Professioneel politie- & dossiersysteem voor RP-Minecraft servers.
+          </p>
+
+          <ul>
+            <li><strong>Politie dashboard:</strong> <code>/politie</code> met overzicht van alle spelers (skull, wanted-status, laatste info).</li>
+            <li><strong>Dossiers:</strong> last seen + locatie (~15 min geleden) met tijden in Europe/Amsterdam.</li>
+            <li><strong>Strafblad:</strong> boetes & celstraffen met reden en geschiedenis (SQLite).</li>
+            <li><strong>History GUI:</strong> record bekijken en verwijderen met bevestiging (permanent).</li>
+            <li><strong>Command:</strong> <code>/strafblad &lt;speler&gt; &lt;boete|cel&gt; &lt;aantal&gt; &lt;reden&gt;</code></li>
+          </ul>
+
+          <div class="meta">
+            <span class="tag">Spigot / Paper 1.21.x</span>
+            <span class="tag">Java 21</span>
+            <span class="tag">Roleplay</span>
+          </div>
+        </div>
+
+        <div class="card plugin">
+          <h3>✨ DWasmachine ✨</h3>
+          <p style="margin:0; color: var(--muted);">
+            De ultieme wasmachine-plugin voor je Minecraft server.
+          </p>
+
+          <ul>
+            <li><strong>Custom block:</strong> kies welk block de wasmachine is via <code>config.yml</code>; rechtsklik om GUI te openen.</li>
+            <li><strong>Custom GUI:</strong> input, wastablet en output met progress bar.</li>
+            <li><strong>Wassen:</strong> damaged armor + Wastablets; output is 100% gerepareerd.</li>
+            <li><strong>Veilig gedrag:</strong> GUI sluiten pauzeert, opnieuw openen gaat verder; geen item-loss.</li>
+            <li><strong>Particles & sounds</strong> tijdens het wassen en bij completion.</li>
+            <li><strong>Staff tools:</strong> <code>/wastablet [player] [amount]</code></li>
+          </ul>
+
+          <div class="meta">
+            <span class="tag">Spigot 1.21.x</span>
+            <span class="tag">Java 21</span>
+            <span class="tag">Fun Utility</span>
+          </div>
+        </div>
+
+        <div class="card plugin">
+          <h3>✨ DCoreDisplay ✨</h3>
+          <p style="margin:0; color: var(--muted);">
+            Display-plugin met MOTD, server icon, animated tablist en staff GUI.
+          </p>
+
+          <ul>
+            <li><strong>MOTD:</strong> meerdere regels, kleuren, emoji’s, placeholders.</li>
+            <li><strong>Server icon:</strong> makkelijk aanpassen (64x64 PNG).</li>
+            <li><strong>Animated tablist:</strong> themes, header/footer via config, live updates.</li>
+            <li><strong>Staff GUI:</strong> beheren via <code>/dcoredisplay</code> of <code>/dcd</code>, reload met <code>/dcoredisplay reload</code>.</li>
+            <li><strong>PlaceholderAPI support</strong></li>
+          </ul>
+
+          <div class="meta">
+            <span class="tag">Spigot 1.21.x</span>
+            <span class="tag">Java 21</span>
+            <span class="tag">PlaceholderAPI</span>
           </div>
         </div>
       </div>
@@ -383,7 +472,7 @@
       <h2>Contact</h2>
       <div class="card" style="padding:18px;">
         <p style="margin:0 0 10px; color: var(--muted);">
-          Plugins (gratis & betaald) drop ik op Discord. Voor vragen, bug reports of custom werk: join de server.
+          Plugins (gratis & betaald) staan op Discord. Voor vragen, support, bug reports of custom werk: join de server.
         </p>
         <div class="ctaRow">
           <a class="btn" href="https://discord.gg/ZE4PvSyTUq" target="_blank" rel="noopener">Discord: Releases & Support</a>
@@ -395,7 +484,7 @@
     <footer>
       <div class="footGrid">
         <p class="small">© 2026 DavisGoToBed — Java Developer • Minecraft Plugins</p>
-        <p class="small">Theme: Light Blue • Black • White</p>
+        <p class="small">Discord: discord.gg/ZE4PvSyTUq</p>
       </div>
     </footer>
   </div>
